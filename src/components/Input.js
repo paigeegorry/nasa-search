@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Input() {
+  const [searchValue, setSearchValue] = useState('');
+
   return (
-    <input type="text" />
+    <form>
+      <input type="text" value={searchValue} onChange={({ target }) => setSearchValue(target.value)} />
+    </form>
   )
 }
