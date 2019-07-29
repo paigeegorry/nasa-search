@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { Button } from 'react-bootstrap';
+import { Button, InputGroup } from 'react-bootstrap';
 import { fetchPhotosApi } from '../services/nasaFetch';
+import './Input.scss'
 
 export default function Input() {
   const [searchValue, setSearchValue] = useState('');
@@ -12,8 +13,9 @@ export default function Input() {
       event.preventDefault();
       dispatch({ type: 'FETCH_PHOTOS', payload: fetchPhotosApi(searchValue) })
     }}>
-      <input type="text" value={searchValue} onChange={({ target }) => setSearchValue(target.value)} />
-      <button>Search</button>
+
+      <input className="input" type="text" value={searchValue} onChange={({ target }) => setSearchValue(target.value)} />
+      <Button variant="dark">Search</Button>
     </form>
   )
 }
