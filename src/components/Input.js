@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Button, InputGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { fetchPhotosApi } from '../services/nasaFetch';
 import './Input.scss'
 

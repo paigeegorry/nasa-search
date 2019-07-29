@@ -1,3 +1,11 @@
+.photo-grid{
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: .5rem;
+    grid-column-gap: .5rem;
+    margin: .5rem;
+}
 .card{
     max-height: max-content;
     min-height: 40rem;

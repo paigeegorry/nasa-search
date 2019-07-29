@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../Input';
 import Images from '../images/Images';
-import './index.scss'
+import './App.scss'
 
 function App() {
   return (
