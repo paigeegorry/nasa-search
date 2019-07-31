@@ -13,7 +13,6 @@ export default function Input() {
       event.preventDefault();
       dispatch({ type: 'FETCH_PHOTOS', payload: fetchPhotosApi(searchValue) })
     }}>
-
       <input className="input" type="text" value={searchValue} onChange={({ target }) => setSearchValue(target.value)} />
       <Button variant="dark">Search</Button>
     </form>

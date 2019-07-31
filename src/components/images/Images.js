@@ -4,7 +4,7 @@ import { ImageCard } from './Image'
 import './css/index.scss'
 
 export default function Images() {
-  const photos = useSelector(state => state);
+  const photos = useSelector(state => state.items);
   const photoList = photos.map((photo, i) => {
     return (
       <ImageCard photo={photo} key={i}/>
