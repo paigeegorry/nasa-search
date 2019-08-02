@@ -8,8 +8,28 @@
     flex-direction: column;
 }
 
-h1 {
+// animation credit (https://css-tricks.com/snippets/css/typewriter-effect/)
+.container h1 {
+    overflow: hidden; 
+    border-right: .15em solid blue; 
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    
     @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
     font-family: Space Mono;
     font-size: 5em;
-}
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue; }
+  }
