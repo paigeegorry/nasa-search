@@ -4,3 +4,18 @@
     height: 2.2rem;
     margin: 1rem;
 }
+#keywords {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    list-style: none;
+    button {
+        margin: 10px;
+    }
+}
+
+h3 {
+    font-size: 1.5em;
+    @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+    font-family: 'Space Mono', monospace;
+}

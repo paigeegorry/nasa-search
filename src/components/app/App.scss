@@ -7,3 +7,9 @@
     align-items: center;
     flex-direction: column;
 }
+
+h1 {
+    @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+    font-family: Space Mono;
+    font-size: 5em;
+}

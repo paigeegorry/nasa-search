@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPhotosApi } from '../services/nasaFetch';
 import { Button } from 'react-bootstrap';
+import './Input.scss';
 
 export default function Keywords() {
   const dispatch = useDispatch();
@@ -11,15 +12,18 @@ export default function Keywords() {
   const listOfKeywords = arrOfKeywords.map(keyword => {
     return (
       <li>
-        <Button onClick={() => dispatch({ type: 'FETCH_PHOTOS', payload: fetchPhotosApi(keyword[0]) })}>
+        <Button variant="dark" onClick={() => dispatch({ type: 'FETCH_PHOTOS', payload: fetchPhotosApi(keyword[0]) })}>
           {keyword[0]}
         </Button>
       </li>
     )
   })
     return (
-    <ul>
-      {listOfKeywords.slice(0, 5)}
-    </ul>
+    <div >
+    {listOfKeywords.length > 1 && <h3>Other popular searches...</h3>}
+      <ul id="keywords">
+        {listOfKeywords.slice(0, 5)}
+      </ul>
+    </div>
   )
 }
